@@ -45,8 +45,8 @@ importers:
         specifier: 1.30.0
         version: 1.30.0
       prettier:
-        specifier: ^2.8.0
-        version: 2.8.0
+        specifier: ^3.0.0
+        version: 3.0.3
       rollup:
         specifier: ^3.7.0
         version: 3.7.0
@@ -80,7 +80,7 @@ importers:
         version: 4.20230404.0
       '@sveltejs/kit':
         specifier: ^1.0.0
-        version: link:../kit
+        version: 1.30.4(svelte@4.2.0)(vite@4.4.9)
       esbuild:
         specifier: ^0.18.11
         version: 0.18.11
@@ -108,7 +108,7 @@ importers:
         version: 2.2.5
       '@sveltejs/kit':
         specifier: ^1.0.0
-        version: link:../kit
+        version: 1.30.4(svelte@4.2.0)(vite@4.4.9)
       esbuild:
         specifier: ^0.18.11
         version: 0.18.11
@@ -289,7 +289,7 @@ importers:
     dependencies:
       '@sveltejs/kit':
         specifier: ^1.0.0
-        version: link:../kit
+        version: 1.30.4(svelte@4.2.0)(vite@4.4.9)
 
   packages/create-svelte:
     dependencies:
@@ -307,17 +307,17 @@ importers:
         specifier: ^0.0.1
         version: 0.0.1
       '@types/prettier':
-        specifier: ^2.7.1
-        version: 2.7.1
+        specifier: ^3.0.0
+        version: 3.0.0
       gitignore-parser:
         specifier: ^0.0.2
         version: 0.0.2
       prettier:
-        specifier: ^2.8.0
-        version: 2.8.0
+        specifier: ^3.0.0
+        version: 3.0.3
       prettier-plugin-svelte:
         specifier: ^2.10.1
-        version: 2.10.1(prettier@2.8.0)(svelte@4.1.2)
+        version: 2.10.1(prettier@3.0.3)(svelte@4.1.2)
       sucrase:
         specifier: ^3.29.0
         version: 3.29.0
@@ -934,8 +934,8 @@ importers:
         specifier: ^7.5.0
         version: 7.5.0
       prettier:
-        specifier: ^2.8.0
-        version: 2.8.0
+        specifier: ^3.0.0
+        version: 3.0.3
       vitest:
         specifier: ^0.34.5
         version: 0.34.5(lightningcss@1.21.8)(playwright@1.30.0)
@@ -1746,6 +1746,11 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
+  /@fastify/busboy@2.1.1:
+    resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
+    engines: {node: '>=14'}
+    dev: false
+
   /@fontsource/fira-mono@5.0.5:
     resolution: {integrity: sha512-R5HaONNjI8zzZgjATOrtDhhl58U19OslqNOanPpiHqXV8XWKmFqRF1hIekrWemLfpSTK1WO3wyNcFMZMwkKhlA==}
     dev: false
@@ -2018,6 +2023,34 @@ packages:
       typescript: 4.9.4
     dev: true
 
+  /@sveltejs/kit@1.30.4(svelte@4.2.0)(vite@4.4.9):
+    resolution: {integrity: sha512-JSQIQT6XvdchCRQEm7BABxPC56WP5RYVONAi+09S8tmzeP43fBsRlr95bFmsTQM2RHBldfgQk+jgdnsKI75daA==}
+    engines: {node: ^16.14 || >=18}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      svelte: ^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.0
+      vite: ^4.0.0
+    dependencies:
+      '@sveltejs/vite-plugin-svelte': 2.5.3(svelte@4.2.0)(vite@4.4.9)
+      '@types/cookie': 0.5.1
+      cookie: 0.5.0
+      devalue: 4.3.1
+      esm-env: 1.0.0
+      kleur: 4.1.5
+      magic-string: 0.30.3
+      mrmime: 1.0.1
+      sade: 1.8.1
+      set-cookie-parser: 2.6.0
+      sirv: 2.0.3
+      svelte: 4.2.0
+      tiny-glob: 0.2.9
+      undici: 5.28.3
+      vite: 4.4.9(@types/node@16.18.6)(lightningcss@1.21.8)
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /@sveltejs/site-kit@6.0.0-next.50(@sveltejs/kit@packages+kit)(svelte@4.2.0):
     resolution: {integrity: sha512-kgJVREVGuhhNO1YfQwJelFsBqfJiPhP7J4ytGUg05FaYlNQn3jb+BMUo027fSRpLgAjCqoo0IzIwX6CSSqqyJg==}
     peerDependencies:
@@ -2046,6 +2079,22 @@ packages:
       - supports-color
     dev: false
 
+  /@sveltejs/vite-plugin-svelte-inspector@1.0.4(@sveltejs/vite-plugin-svelte@2.5.3)(svelte@4.2.0)(vite@4.4.9):
+    resolution: {integrity: sha512-zjiuZ3yydBtwpF3bj0kQNV0YXe+iKE545QGZVTaylW3eAzFr+pJ/cwK8lZEaRp4JtaJXhD5DyWAV4AxLh6DgaQ==}
+    engines: {node: ^14.18.0 || >= 16}
+    peerDependencies:
+      '@sveltejs/vite-plugin-svelte': ^2.2.0
+      svelte: ^3.54.0 || ^4.0.0
+      vite: ^4.0.0
+    dependencies:
+      '@sveltejs/vite-plugin-svelte': 2.5.3(svelte@4.2.0)(vite@4.4.9)
+      debug: 4.3.4
+      svelte: 4.2.0
+      vite: 4.4.9(@types/node@16.18.6)(lightningcss@1.21.8)
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /@sveltejs/vite-plugin-svelte@2.4.1(svelte@4.1.2)(vite@4.4.9):
     resolution: {integrity: sha512-bNNKvoRY89ptY7udeBSCmTdCVwkjmMcZ0j/z9J5MuedT8jPjq0zrknAo/jF1sToAza4NVaAgR9AkZoD9oJJmnA==}
     engines: {node: ^14.18.0 || >= 16}
@@ -2060,6 +2109,26 @@ packages:
       magic-string: 0.30.2
       svelte: 4.1.2
       svelte-hmr: 0.15.3(svelte@4.1.2)
+      vite: 4.4.9(@types/node@16.18.6)(lightningcss@1.21.8)
+      vitefu: 0.2.4(vite@4.4.9)
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@sveltejs/vite-plugin-svelte@2.5.3(svelte@4.2.0)(vite@4.4.9):
+    resolution: {integrity: sha512-erhNtXxE5/6xGZz/M9eXsmI7Pxa6MS7jyTy06zN3Ck++ldrppOnOlJwHHTsMC7DHDQdgUp4NAc4cDNQ9eGdB/w==}
+    engines: {node: ^14.18.0 || >= 16}
+    peerDependencies:
+      svelte: ^3.54.0 || ^4.0.0 || ^5.0.0-next.0
+      vite: ^4.0.0
+    dependencies:
+      '@sveltejs/vite-plugin-svelte-inspector': 1.0.4(@sveltejs/vite-plugin-svelte@2.5.3)(svelte@4.2.0)(vite@4.4.9)
+      debug: 4.3.4
+      deepmerge: 4.3.1
+      kleur: 4.1.5
+      magic-string: 0.30.3
+      svelte: 4.2.0
+      svelte-hmr: 0.15.3(svelte@4.2.0)
       vite: 4.4.9(@types/node@16.18.6)(lightningcss@1.21.8)
       vitefu: 0.2.4(vite@4.4.9)
     transitivePeerDependencies:
@@ -2159,8 +2228,11 @@ packages:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
 
-  /@types/prettier@2.7.1:
-    resolution: {integrity: sha512-ri0UmynRRvZiiUJdiz38MmIblKK+oH30MztdBVR95dv/Ubw6neWSb8u1XpRb72L4qsZOhz+L+z9JD40SJmfWow==}
+  /@types/prettier@3.0.0:
+    resolution: {integrity: sha512-mFMBfMOz8QxhYVbuINtswBp9VL2b4Y0QqYHwqLz3YbgtfAcat2Dl6Y1o4e22S/OVE6Ebl9m7wWiMT2lSbAs1wA==}
+    deprecated: This is a stub types definition. prettier provides its own type definitions, so you do not need this installed.
+    dependencies:
+      prettier: 3.0.3
     dev: true
 
   /@types/prompts@2.4.1:
@@ -2896,7 +2968,6 @@ packages:
       acorn: 8.10.0
       estree-walker: 3.0.3
       periscopic: 3.1.0
-    dev: true
 
   /color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -4171,7 +4242,6 @@ packages:
     resolution: {integrity: sha512-v3rht/LgVcsdZa3O2Nqs+NMowLOxeOm7Ay9+/ARQ2F+qEoANRcqrjAZKGN0v8ymUetZGgkp26LTnGT7H0Qo9Pg==}
     dependencies:
       '@types/estree': 1.0.1
-    dev: true
 
   /is-regex@1.1.4:
     resolution: {integrity: sha512-kvRdxDsxZjhzUX07ZnLydzS1TU/TJlTUHHY4YLL87e37oUA49DfkLqgy+VjFocowy29cKvcSiu+kIv728jTTVg==}
@@ -5108,13 +5178,13 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte@2.10.1(prettier@2.8.0)(svelte@4.1.2):
+  /prettier-plugin-svelte@2.10.1(prettier@3.0.3)(svelte@4.1.2):
     resolution: {integrity: sha512-Wlq7Z5v2ueCubWo0TZzKc9XHcm7TDxqcuzRuGd0gcENfzfT4JZ9yDlCbEgxWgiPmLHkBjfOtpAWkcT28MCDpUQ==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0
     dependencies:
-      prettier: 2.8.0
+      prettier: 3.0.3
       svelte: 4.1.2
     dev: true
 
@@ -5791,6 +5861,15 @@ packages:
       svelte: 4.1.2
     dev: false
 
+  /svelte-hmr@0.15.3(svelte@4.2.0):
+    resolution: {integrity: sha512-41snaPswvSf8TJUhlkoJBekRrABDXDMdpNpT2tfHIv4JuhgvHqLMhEPGtaQn0BmbNSTkuz2Ed20DF2eHw0SmBQ==}
+    engines: {node: ^12.20 || ^14.13.1 || >= 16}
+    peerDependencies:
+      svelte: ^3.19.0 || ^4.0.0
+    dependencies:
+      svelte: 4.2.0
+    dev: false
+
   /svelte-local-storage-store@0.6.0(svelte@4.2.0):
     resolution: {integrity: sha512-UbCY/yT/YUadU5IX/gZkoRQnA+ebFZHKKQjlJvfWHnBj3CPe9sNn8ndxYz/xy4LUzGjuBLq8+wH5RYK54ba3wA==}
     engines: {node: '>=0.14'}
@@ -5943,7 +6022,6 @@ packages:
       locate-character: 3.0.0
       magic-string: 0.30.3
       periscopic: 3.1.0
-    dev: true
 
   /tar-fs@2.1.1:
     resolution: {integrity: sha512-V0r2Y9scmbDRLCNex/+hYzvp/zyYjvFbHPNgVTKfQvVrb6guiE/fxP+XblDNR011utopbkex2nM4dHNV6GDsng==}
@@ -6254,6 +6332,13 @@ packages:
     engines: {node: '>=14.0'}
     dependencies:
       busboy: 1.6.0
+    dev: false
+
+  /undici@5.28.3:
+    resolution: {integrity: sha512-3ItfzbrhDlINjaP0duwnNsKpDQk3acHI3gVJ1z4fmwMK31k5G9OVIAMLSIaP6w4FaGkaAkN6zaQO9LUvZ1t7VA==}
+    engines: {node: '>=14.0'}
+    dependencies:
+      '@fastify/busboy': 2.1.1
     dev: false
 
   /universalify@0.1.2:
