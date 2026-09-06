@@ -20,7 +20,7 @@
 		"postinstall": "pnpm -r generate:types"
 	},
 	"devDependencies": {
-		"@changesets/cli": "^2.26.0",
+		"@changesets/cli": "^3.0.0",
 		"@rollup/plugin-commonjs": "^25.0.0",
 		"@rollup/plugin-json": "^6.0.0",
 		"@rollup/plugin-node-resolve": "^15.0.1",
