@@ -20,13 +20,13 @@
 	"devDependencies": {
 		"@types/node": "^16.18.6",
 		"@types/semver": "^7.5.0",
-		"svelte": "^4.0.5",
+		"svelte": "^5.0.0",
 		"svelte-preprocess": "^5.0.4",
 		"typescript": "^4.9.4",
 		"uvu": "^0.5.6"
 	},
 	"peerDependencies": {
-		"svelte": "^3.44.0 || ^4.0.0"
+		"svelte": "^5.55.7 ^5.55.7"
 	},
 	"bin": {
 		"svelte-package": "svelte-package.js"
